@@ -382,7 +382,7 @@
     (property "Datasheet" "~" (at 81.28 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C115671" (at 81.28 46.99 0)
+    (property "LCSC" "C307331" (at 81.28 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 424d0d93-269e-45ed-8749-0f806bb6cdbc))
@@ -411,8 +411,8 @@
     (property "Datasheet" "~" (at 55.88 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 2f7fad7c-9e84-4087-8503-fd453561deb1))
     (pin "1" (uuid bb5096a6-4faa-4791-901b-edd4c1dc9d5e))
+    (pin "2" (uuid 2f7fad7c-9e84-4087-8503-fd453561deb1))
     (instances
       (project "eprom5vread"
         (path "/b08a8275-42d3-43c1-b04c-f89506e7527b/2fd5d481-fecc-449f-aabd-88adee8fd543/8c29ad67-2ca5-4386-bc0e-0233a83181ef"
@@ -466,8 +466,8 @@
     (property "Datasheet" "~" (at 55.88 40.64 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid fd8cb0c1-f11e-4158-9a86-a2d5fbd1e459))
     (pin "1" (uuid decd0cf3-ae8a-447c-862d-5de45d1ceabf))
+    (pin "2" (uuid fd8cb0c1-f11e-4158-9a86-a2d5fbd1e459))
     (instances
       (project "eprom5vread"
         (path "/b08a8275-42d3-43c1-b04c-f89506e7527b/2fd5d481-fecc-449f-aabd-88adee8fd543/8c29ad67-2ca5-4386-bc0e-0233a83181ef"
@@ -492,7 +492,7 @@
     (property "Datasheet" "~" (at 81.28 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C115671" (at 81.28 97.79 0)
+    (property "LCSC" "C307331" (at 81.28 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 3d629abc-2053-44e9-a9cd-9674e2c16724))
@@ -521,7 +521,7 @@
     (property "Datasheet" "~" (at 60.96 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C274416" (at 60.96 46.99 0)
+    (property "LCSC" "C23733" (at 60.96 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid eb8e96ed-fe92-40d7-9f0f-7c896589d6a6))
@@ -550,7 +550,7 @@
     (property "Datasheet" "~" (at 81.28 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C314234" (at 81.28 72.39 0)
+    (property "LCSC" "C52923" (at 81.28 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4f760920-aa2b-4deb-acec-5fc5af44b59b))
@@ -579,8 +579,8 @@
     (property "Datasheet" "~" (at 55.88 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 17350906-a19c-478f-8497-ac282e9b4b64))
     (pin "1" (uuid a229d2f0-b559-4769-bec2-eae1b4a3582b))
+    (pin "2" (uuid 17350906-a19c-478f-8497-ac282e9b4b64))
     (instances
       (project "eprom5vread"
         (path "/b08a8275-42d3-43c1-b04c-f89506e7527b/2fd5d481-fecc-449f-aabd-88adee8fd543/8c29ad67-2ca5-4386-bc0e-0233a83181ef"

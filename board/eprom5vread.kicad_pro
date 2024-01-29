@@ -500,6 +500,14 @@
       "MCU Power"
     ],
     [
+      "6327e597-74ae-4074-90f5-37ad20c0474e",
+      "MCU Reset"
+    ],
+    [
+      "39033807-b906-459f-a233-a45afe12edb8",
+      "MCU Debug"
+    ],
+    [
       "c54b81a7-3db0-4a3a-8a69-42681797f7bd",
       "EPROM"
     ]
