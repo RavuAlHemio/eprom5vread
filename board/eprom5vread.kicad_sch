@@ -53,7 +53,7 @@
   )
 
   (bus_alias "EPROMBUS" (members "A[0..18]" "Q[0..14]" "Q15A-1" "ROM_~{CS}" "ROM_~{OE}" "LSOE" "~{BYTE}V_{PP}"))
-  (bus_alias "MCUPWR" (members "VDD" "VBAT" "VREF+" "VSS"))
+  (bus_alias "MCUPWR" (members "VDD" "VBAT" "VREF+" "GND"))
   (junction (at 85.09 186.69) (diameter 0) (color 0 0 0 0)
     (uuid 938f22ff-bbc0-446a-8de5-daaa178ba9f0)
   )
@@ -1380,6 +1380,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid dddb3887-005d-4dd7-85b1-f73a8e6abdbf)
   )
+  (label "LSOE" (at 233.68 27.94 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid e0d8e0c2-3e32-47a0-970b-f04770a592b5)
+  )
   (label "Q3" (at 233.68 53.34 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e1a1d04c-0ceb-4431-9fed-711464c28065)
@@ -1436,7 +1440,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 207.01 139.7 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 31661421-57a1-4394-878d-ecf63636d51b)
-    (property "Reference" "J3" (at 207.01 133.35 0)
+    (property "Reference" "J102" (at 207.01 133.35 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "UART" (at 207.01 135.89 0)
@@ -1456,7 +1460,7 @@
     (instances
       (project "eprom5vread"
         (path "/b08a8275-42d3-43c1-b04c-f89506e7527b"
-          (reference "J3") (unit 1)
+          (reference "J102") (unit 1)
         )
       )
     )
