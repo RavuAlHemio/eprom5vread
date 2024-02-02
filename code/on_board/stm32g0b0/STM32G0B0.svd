@@ -35625,22 +35625,22 @@ This bitfield can only be written when the USART is disabled (UE=0).</descriptio
             <access>read-write</access>
             <enumeratedValues>
               <enumeratedValue>
-                <name>B_0x0</name>
+                <name>ONE</name>
                 <description>1 stop bit</description>
                 <value>0x0</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x1</name>
+                <name>HALF</name>
                 <description>0.5 stop bit.</description>
                 <value>0x1</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x2</name>
+                <name>TWO</name>
                 <description>2 stop bits</description>
                 <value>0x2</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x3</name>
+                <name>ONE_AND_A_HALF</name>
                 <description>1.5 stop bits</description>
                 <value>0x3</value>
               </enumeratedValue>
@@ -37869,62 +37869,62 @@ Note: When PRESCALER is programmed with a value different of the allowed ones, p
             <access>read-write</access>
             <enumeratedValues>
               <enumeratedValue>
-                <name>B_0x0</name>
+                <name>DIV1</name>
                 <description>input clock not divided</description>
                 <value>0x0</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x1</name>
+                <name>DIV2</name>
                 <description>input clock divided by 2</description>
                 <value>0x1</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x2</name>
+                <name>DIV4</name>
                 <description>input clock divided by 4</description>
                 <value>0x2</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x3</name>
+                <name>DIV6</name>
                 <description>input clock divided by 6</description>
                 <value>0x3</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x4</name>
+                <name>DIV8</name>
                 <description>input clock divided by 8</description>
                 <value>0x4</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x5</name>
+                <name>DIV10</name>
                 <description>input clock divided by 10</description>
                 <value>0x5</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x6</name>
+                <name>DIV12</name>
                 <description>input clock divided by 12</description>
                 <value>0x6</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x7</name>
+                <name>DIV16</name>
                 <description>input clock divided by 16</description>
                 <value>0x7</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x8</name>
+                <name>DIV32</name>
                 <description>input clock divided by 32</description>
                 <value>0x8</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x9</name>
+                <name>DIV64</name>
                 <description>input clock divided by 64</description>
                 <value>0x9</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0xA</name>
+                <name>DIV128</name>
                 <description>input clock divided by 128</description>
                 <value>0xA</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0xB</name>
+                <name>DIV256</name>
                 <description>input clock divided by 256</description>
                 <value>0xB</value>
               </enumeratedValue>

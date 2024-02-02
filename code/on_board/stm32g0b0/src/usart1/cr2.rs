@@ -489,13 +489,13 @@ pub type STOP_R = crate::FieldReader<STOP_A>;
 #[repr(u8)]
 pub enum STOP_A {
     #[doc = "0: 1 stop bit"]
-    B_0X0 = 0,
+    ONE = 0,
     #[doc = "1: 0.5 stop bit."]
-    B_0X1 = 1,
+    HALF = 1,
     #[doc = "2: 2 stop bits"]
-    B_0X2 = 2,
+    TWO = 2,
     #[doc = "3: 1.5 stop bits"]
-    B_0X3 = 3,
+    ONE_AND_A_HALF = 3,
 }
 impl From<STOP_A> for u8 {
     #[inline(always)]
@@ -511,32 +511,32 @@ impl STOP_R {
     #[inline(always)]
     pub const fn variant(&self) -> STOP_A {
         match self.bits {
-            0 => STOP_A::B_0X0,
-            1 => STOP_A::B_0X1,
-            2 => STOP_A::B_0X2,
-            3 => STOP_A::B_0X3,
+            0 => STOP_A::ONE,
+            1 => STOP_A::HALF,
+            2 => STOP_A::TWO,
+            3 => STOP_A::ONE_AND_A_HALF,
             _ => unreachable!(),
         }
     }
     #[doc = "1 stop bit"]
     #[inline(always)]
-    pub fn is_b_0x0(&self) -> bool {
-        *self == STOP_A::B_0X0
+    pub fn is_one(&self) -> bool {
+        *self == STOP_A::ONE
     }
     #[doc = "0.5 stop bit."]
     #[inline(always)]
-    pub fn is_b_0x1(&self) -> bool {
-        *self == STOP_A::B_0X1
+    pub fn is_half(&self) -> bool {
+        *self == STOP_A::HALF
     }
     #[doc = "2 stop bits"]
     #[inline(always)]
-    pub fn is_b_0x2(&self) -> bool {
-        *self == STOP_A::B_0X2
+    pub fn is_two(&self) -> bool {
+        *self == STOP_A::TWO
     }
     #[doc = "1.5 stop bits"]
     #[inline(always)]
-    pub fn is_b_0x3(&self) -> bool {
-        *self == STOP_A::B_0X3
+    pub fn is_one_and_a_half(&self) -> bool {
+        *self == STOP_A::ONE_AND_A_HALF
     }
 }
 #[doc = "Field `STOP` writer - stop bits These bits are used for programming the stop bits. This bitfield can only be written when the USART is disabled (UE=0)."]
@@ -548,23 +548,23 @@ where
 {
     #[doc = "1 stop bit"]
     #[inline(always)]
-    pub fn b_0x0(self) -> &'a mut crate::W<REG> {
-        self.variant(STOP_A::B_0X0)
+    pub fn one(self) -> &'a mut crate::W<REG> {
+        self.variant(STOP_A::ONE)
     }
     #[doc = "0.5 stop bit."]
     #[inline(always)]
-    pub fn b_0x1(self) -> &'a mut crate::W<REG> {
-        self.variant(STOP_A::B_0X1)
+    pub fn half(self) -> &'a mut crate::W<REG> {
+        self.variant(STOP_A::HALF)
     }
     #[doc = "2 stop bits"]
     #[inline(always)]
-    pub fn b_0x2(self) -> &'a mut crate::W<REG> {
-        self.variant(STOP_A::B_0X2)
+    pub fn two(self) -> &'a mut crate::W<REG> {
+        self.variant(STOP_A::TWO)
     }
     #[doc = "1.5 stop bits"]
     #[inline(always)]
-    pub fn b_0x3(self) -> &'a mut crate::W<REG> {
-        self.variant(STOP_A::B_0X3)
+    pub fn one_and_a_half(self) -> &'a mut crate::W<REG> {
+        self.variant(STOP_A::ONE_AND_A_HALF)
     }
 }
 #[doc = "Field `LINEN` reader - LIN mode enable This bit is set and cleared by software. The LIN mode enables the capability to send LIN synchronous breaks (13 low bits) using the SBKRQ bit in the USART_CR1 register, and to detect LIN Sync breaks. This bitfield can only be written when the USART is disabled (UE=0). Note: If the USART does not support LIN mode, this bit is reserved and must be kept at reset value. Refer to ."]

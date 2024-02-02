@@ -25,6 +25,7 @@ fn main() -> ! {
 
     crate::setup::setup_clocks(&mut peripherals);
     crate::uart::setup(&mut peripherals);
+    crate::uart::write(&mut peripherals, b"Well hello there!\r\n");
 
     loop {
     }

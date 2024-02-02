@@ -9,29 +9,29 @@ pub type PRESCALER_R = crate::FieldReader<PRESCALER_A>;
 #[repr(u8)]
 pub enum PRESCALER_A {
     #[doc = "0: input clock not divided"]
-    B_0X0 = 0,
+    DIV1 = 0,
     #[doc = "1: input clock divided by 2"]
-    B_0X1 = 1,
+    DIV2 = 1,
     #[doc = "2: input clock divided by 4"]
-    B_0X2 = 2,
+    DIV4 = 2,
     #[doc = "3: input clock divided by 6"]
-    B_0X3 = 3,
+    DIV6 = 3,
     #[doc = "4: input clock divided by 8"]
-    B_0X4 = 4,
+    DIV8 = 4,
     #[doc = "5: input clock divided by 10"]
-    B_0X5 = 5,
+    DIV10 = 5,
     #[doc = "6: input clock divided by 12"]
-    B_0X6 = 6,
+    DIV12 = 6,
     #[doc = "7: input clock divided by 16"]
-    B_0X7 = 7,
+    DIV16 = 7,
     #[doc = "8: input clock divided by 32"]
-    B_0X8 = 8,
+    DIV32 = 8,
     #[doc = "9: input clock divided by 64"]
-    B_0X9 = 9,
+    DIV64 = 9,
     #[doc = "10: input clock divided by 128"]
-    B_0X_A = 10,
+    DIV128 = 10,
     #[doc = "11: input clock divided by 256"]
-    B_0X_B = 11,
+    DIV256 = 11,
 }
 impl From<PRESCALER_A> for u8 {
     #[inline(always)]
@@ -47,80 +47,80 @@ impl PRESCALER_R {
     #[inline(always)]
     pub const fn variant(&self) -> Option<PRESCALER_A> {
         match self.bits {
-            0 => Some(PRESCALER_A::B_0X0),
-            1 => Some(PRESCALER_A::B_0X1),
-            2 => Some(PRESCALER_A::B_0X2),
-            3 => Some(PRESCALER_A::B_0X3),
-            4 => Some(PRESCALER_A::B_0X4),
-            5 => Some(PRESCALER_A::B_0X5),
-            6 => Some(PRESCALER_A::B_0X6),
-            7 => Some(PRESCALER_A::B_0X7),
-            8 => Some(PRESCALER_A::B_0X8),
-            9 => Some(PRESCALER_A::B_0X9),
-            10 => Some(PRESCALER_A::B_0X_A),
-            11 => Some(PRESCALER_A::B_0X_B),
+            0 => Some(PRESCALER_A::DIV1),
+            1 => Some(PRESCALER_A::DIV2),
+            2 => Some(PRESCALER_A::DIV4),
+            3 => Some(PRESCALER_A::DIV6),
+            4 => Some(PRESCALER_A::DIV8),
+            5 => Some(PRESCALER_A::DIV10),
+            6 => Some(PRESCALER_A::DIV12),
+            7 => Some(PRESCALER_A::DIV16),
+            8 => Some(PRESCALER_A::DIV32),
+            9 => Some(PRESCALER_A::DIV64),
+            10 => Some(PRESCALER_A::DIV128),
+            11 => Some(PRESCALER_A::DIV256),
             _ => None,
         }
     }
     #[doc = "input clock not divided"]
     #[inline(always)]
-    pub fn is_b_0x0(&self) -> bool {
-        *self == PRESCALER_A::B_0X0
+    pub fn is_div1(&self) -> bool {
+        *self == PRESCALER_A::DIV1
     }
     #[doc = "input clock divided by 2"]
     #[inline(always)]
-    pub fn is_b_0x1(&self) -> bool {
-        *self == PRESCALER_A::B_0X1
+    pub fn is_div2(&self) -> bool {
+        *self == PRESCALER_A::DIV2
     }
     #[doc = "input clock divided by 4"]
     #[inline(always)]
-    pub fn is_b_0x2(&self) -> bool {
-        *self == PRESCALER_A::B_0X2
+    pub fn is_div4(&self) -> bool {
+        *self == PRESCALER_A::DIV4
     }
     #[doc = "input clock divided by 6"]
     #[inline(always)]
-    pub fn is_b_0x3(&self) -> bool {
-        *self == PRESCALER_A::B_0X3
+    pub fn is_div6(&self) -> bool {
+        *self == PRESCALER_A::DIV6
     }
     #[doc = "input clock divided by 8"]
     #[inline(always)]
-    pub fn is_b_0x4(&self) -> bool {
-        *self == PRESCALER_A::B_0X4
+    pub fn is_div8(&self) -> bool {
+        *self == PRESCALER_A::DIV8
     }
     #[doc = "input clock divided by 10"]
     #[inline(always)]
-    pub fn is_b_0x5(&self) -> bool {
-        *self == PRESCALER_A::B_0X5
+    pub fn is_div10(&self) -> bool {
+        *self == PRESCALER_A::DIV10
     }
     #[doc = "input clock divided by 12"]
     #[inline(always)]
-    pub fn is_b_0x6(&self) -> bool {
-        *self == PRESCALER_A::B_0X6
+    pub fn is_div12(&self) -> bool {
+        *self == PRESCALER_A::DIV12
     }
     #[doc = "input clock divided by 16"]
     #[inline(always)]
-    pub fn is_b_0x7(&self) -> bool {
-        *self == PRESCALER_A::B_0X7
+    pub fn is_div16(&self) -> bool {
+        *self == PRESCALER_A::DIV16
     }
     #[doc = "input clock divided by 32"]
     #[inline(always)]
-    pub fn is_b_0x8(&self) -> bool {
-        *self == PRESCALER_A::B_0X8
+    pub fn is_div32(&self) -> bool {
+        *self == PRESCALER_A::DIV32
     }
     #[doc = "input clock divided by 64"]
     #[inline(always)]
-    pub fn is_b_0x9(&self) -> bool {
-        *self == PRESCALER_A::B_0X9
+    pub fn is_div64(&self) -> bool {
+        *self == PRESCALER_A::DIV64
     }
     #[doc = "input clock divided by 128"]
     #[inline(always)]
-    pub fn is_b_0x_a(&self) -> bool {
-        *self == PRESCALER_A::B_0X_A
+    pub fn is_div128(&self) -> bool {
+        *self == PRESCALER_A::DIV128
     }
     #[doc = "input clock divided by 256"]
     #[inline(always)]
-    pub fn is_b_0x_b(&self) -> bool {
-        *self == PRESCALER_A::B_0X_B
+    pub fn is_div256(&self) -> bool {
+        *self == PRESCALER_A::DIV256
     }
 }
 #[doc = "Field `PRESCALER` writer - Clock prescaler The USART input clock can be divided by a prescaler factor: Remaining combinations: Reserved Note: When PRESCALER is programmed with a value different of the allowed ones, programmed prescaler value is 1011 i.e. input clock divided by 256."]
@@ -132,63 +132,63 @@ where
 {
     #[doc = "input clock not divided"]
     #[inline(always)]
-    pub fn b_0x0(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X0)
+    pub fn div1(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV1)
     }
     #[doc = "input clock divided by 2"]
     #[inline(always)]
-    pub fn b_0x1(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X1)
+    pub fn div2(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV2)
     }
     #[doc = "input clock divided by 4"]
     #[inline(always)]
-    pub fn b_0x2(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X2)
+    pub fn div4(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV4)
     }
     #[doc = "input clock divided by 6"]
     #[inline(always)]
-    pub fn b_0x3(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X3)
+    pub fn div6(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV6)
     }
     #[doc = "input clock divided by 8"]
     #[inline(always)]
-    pub fn b_0x4(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X4)
+    pub fn div8(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV8)
     }
     #[doc = "input clock divided by 10"]
     #[inline(always)]
-    pub fn b_0x5(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X5)
+    pub fn div10(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV10)
     }
     #[doc = "input clock divided by 12"]
     #[inline(always)]
-    pub fn b_0x6(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X6)
+    pub fn div12(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV12)
     }
     #[doc = "input clock divided by 16"]
     #[inline(always)]
-    pub fn b_0x7(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X7)
+    pub fn div16(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV16)
     }
     #[doc = "input clock divided by 32"]
     #[inline(always)]
-    pub fn b_0x8(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X8)
+    pub fn div32(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV32)
     }
     #[doc = "input clock divided by 64"]
     #[inline(always)]
-    pub fn b_0x9(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X9)
+    pub fn div64(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV64)
     }
     #[doc = "input clock divided by 128"]
     #[inline(always)]
-    pub fn b_0x_a(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X_A)
+    pub fn div128(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV128)
     }
     #[doc = "input clock divided by 256"]
     #[inline(always)]
-    pub fn b_0x_b(self) -> &'a mut crate::W<REG> {
-        self.variant(PRESCALER_A::B_0X_B)
+    pub fn div256(self) -> &'a mut crate::W<REG> {
+        self.variant(PRESCALER_A::DIV256)
     }
 }
 impl R {
