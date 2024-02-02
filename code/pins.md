@@ -48,7 +48,14 @@ assuming ROM is an M27C800-100F1
 | PF0  |  8 | ROM_A17           | GPIO |
 | PF1  |  9 | ROM_A18           | GPIO |
 
-on bootup
+on STM32G0B0 bootup:
 
 * PA13+PA14 are set to AF0 (debug)
 * all other pins are set to analog mode (GPIO)
+
+byte/word organization of M27C800:
+
+| ~{BYTE}V_{PP} | Q15A-1                                             |
+| ------------- | -------------------------------------------------- |
+| 1             | output Q15 (15th bit of data output)               |
+| 0             | input A-1 (0 = lower byte, 1 = upper byte of word) |
