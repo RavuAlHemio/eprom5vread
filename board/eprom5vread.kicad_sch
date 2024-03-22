@@ -212,6 +212,16 @@
 	)
 	(wire
 		(pts
+			(xy 95.25 63.5) (xy 129.54 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ab88789-7e83-487b-a890-ef1a8ec589b5")
+	)
+	(wire
+		(pts
 			(xy 111.76 91.44) (xy 129.54 91.44)
 		)
 		(stroke
@@ -302,7 +312,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 60.96) (xy 129.54 60.96)
+			(xy 95.25 55.88) (xy 129.54 55.88)
 		)
 		(stroke
 			(width 0)
@@ -469,7 +479,7 @@
 			(uuid "a96c3695-6ed1-4f33-8ee5-95027db4e944")
 		)
 		(pin "SCL" output
-			(at 129.54 58.42 180)
+			(at 129.54 55.88 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -479,7 +489,7 @@
 			(uuid "d0cc50eb-9a45-4555-bb08-785281b54900")
 		)
 		(pin "SDA" bidirectional
-			(at 129.54 60.96 180)
+			(at 129.54 58.42 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -487,6 +497,16 @@
 				(justify left)
 			)
 			(uuid "50698d13-08f8-423e-a4f8-ede4b201ff97")
+		)
+		(pin "I^{2}C_~{RESET}" output
+			(at 129.54 63.5 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "c52be08f-0632-4531-b8e5-1dc4e0b6e322")
 		)
 		(instances
 			(project "eprom5vread"
@@ -557,7 +577,7 @@
 			(uuid "9f750337-a93d-43fc-8aee-0641d47b2405")
 		)
 		(pin "SCL_3.3V" input
-			(at 95.25 58.42 0)
+			(at 95.25 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -567,7 +587,7 @@
 			(uuid "7b60b86a-5705-47e9-877c-3aadc9401671")
 		)
 		(pin "SDA_3.3V" bidirectional
-			(at 95.25 60.96 0)
+			(at 95.25 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -575,6 +595,16 @@
 				(justify right)
 			)
 			(uuid "40e067d7-6578-4cd7-bb86-c612e209b1ef")
+		)
+		(pin "~{RESET}_3.3V" input
+			(at 95.25 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ee473f8a-f2a2-409d-806a-c2acc69ee432")
 		)
 		(instances
 			(project "eprom5vread"
