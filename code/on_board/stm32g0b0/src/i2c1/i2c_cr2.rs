@@ -20,9 +20,9 @@ pub type RD_WRN_R = crate::BitReader<RD_WRN_A>;
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum RD_WRN_A {
     #[doc = "0: Master requests a write transfer."]
-    B_0X0 = 0,
+    WRITE = 0,
     #[doc = "1: Master requests a read transfer."]
-    B_0X1 = 1,
+    READ = 1,
 }
 impl From<RD_WRN_A> for bool {
     #[inline(always)]
@@ -35,19 +35,19 @@ impl RD_WRN_R {
     #[inline(always)]
     pub const fn variant(&self) -> RD_WRN_A {
         match self.bits {
-            false => RD_WRN_A::B_0X0,
-            true => RD_WRN_A::B_0X1,
+            false => RD_WRN_A::WRITE,
+            true => RD_WRN_A::READ,
         }
     }
     #[doc = "Master requests a write transfer."]
     #[inline(always)]
-    pub fn is_b_0x0(&self) -> bool {
-        *self == RD_WRN_A::B_0X0
+    pub fn is_write(&self) -> bool {
+        *self == RD_WRN_A::WRITE
     }
     #[doc = "Master requests a read transfer."]
     #[inline(always)]
-    pub fn is_b_0x1(&self) -> bool {
-        *self == RD_WRN_A::B_0X1
+    pub fn is_read(&self) -> bool {
+        *self == RD_WRN_A::READ
     }
 }
 #[doc = "Field `RD_WRN` writer - Transfer direction (master mode) Note: Changing this bit when the START bit is set is not allowed."]
@@ -58,13 +58,13 @@ where
 {
     #[doc = "Master requests a write transfer."]
     #[inline(always)]
-    pub fn b_0x0(self) -> &'a mut crate::W<REG> {
-        self.variant(RD_WRN_A::B_0X0)
+    pub fn write(self) -> &'a mut crate::W<REG> {
+        self.variant(RD_WRN_A::WRITE)
     }
     #[doc = "Master requests a read transfer."]
     #[inline(always)]
-    pub fn b_0x1(self) -> &'a mut crate::W<REG> {
-        self.variant(RD_WRN_A::B_0X1)
+    pub fn read(self) -> &'a mut crate::W<REG> {
+        self.variant(RD_WRN_A::READ)
     }
 }
 #[doc = "Field `ADD10` reader - 10-bit addressing mode (master mode) Note: Changing this bit when the START bit is set is not allowed."]
@@ -73,9 +73,9 @@ pub type ADD10_R = crate::BitReader<ADD10_A>;
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ADD10_A {
     #[doc = "0: The master operates in 7-bit addressing mode,"]
-    B_0X0 = 0,
+    ADDR_7_BITS = 0,
     #[doc = "1: The master operates in 10-bit addressing mode"]
-    B_0X1 = 1,
+    ADDR_10_BITS = 1,
 }
 impl From<ADD10_A> for bool {
     #[inline(always)]
@@ -88,19 +88,19 @@ impl ADD10_R {
     #[inline(always)]
     pub const fn variant(&self) -> ADD10_A {
         match self.bits {
-            false => ADD10_A::B_0X0,
-            true => ADD10_A::B_0X1,
+            false => ADD10_A::ADDR_7_BITS,
+            true => ADD10_A::ADDR_10_BITS,
         }
     }
     #[doc = "The master operates in 7-bit addressing mode,"]
     #[inline(always)]
-    pub fn is_b_0x0(&self) -> bool {
-        *self == ADD10_A::B_0X0
+    pub fn is_addr_7_bits(&self) -> bool {
+        *self == ADD10_A::ADDR_7_BITS
     }
     #[doc = "The master operates in 10-bit addressing mode"]
     #[inline(always)]
-    pub fn is_b_0x1(&self) -> bool {
-        *self == ADD10_A::B_0X1
+    pub fn is_addr_10_bits(&self) -> bool {
+        *self == ADD10_A::ADDR_10_BITS
     }
 }
 #[doc = "Field `ADD10` writer - 10-bit addressing mode (master mode) Note: Changing this bit when the START bit is set is not allowed."]
@@ -111,13 +111,13 @@ where
 {
     #[doc = "The master operates in 7-bit addressing mode,"]
     #[inline(always)]
-    pub fn b_0x0(self) -> &'a mut crate::W<REG> {
-        self.variant(ADD10_A::B_0X0)
+    pub fn addr_7_bits(self) -> &'a mut crate::W<REG> {
+        self.variant(ADD10_A::ADDR_7_BITS)
     }
     #[doc = "The master operates in 10-bit addressing mode"]
     #[inline(always)]
-    pub fn b_0x1(self) -> &'a mut crate::W<REG> {
-        self.variant(ADD10_A::B_0X1)
+    pub fn addr_10_bits(self) -> &'a mut crate::W<REG> {
+        self.variant(ADD10_A::ADDR_10_BITS)
     }
 }
 #[doc = "Field `HEAD10R` reader - 10-bit address header only read direction (master receiver mode) Note: Changing this bit when the START bit is set is not allowed."]

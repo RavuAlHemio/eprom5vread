@@ -12057,117 +12057,108 @@ Writing 1 in each bit clears the corresponding overrun flag OFx in the DMAMUX_RG
           <access>read-write</access>
           <resetValue>0xFFFFFFFF</resetValue>
           <fields>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER15</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER14</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER13</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>26</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER12</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>24</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER11</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>22</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER10</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER9</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER8</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER7</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>14</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER6</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>12</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER5</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER4</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>8</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER3</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>6</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER2</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="MODER0">
               <name>MODER1</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
             <field>
               <name>MODER0</name>
-              <description>Port x configuration bits (y =
-              0..15)</description>
+              <description>Port mode</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Input mode</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>General purpose output mode</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ALTERNATE_FUNCTION</name>
+                  <description>Alternate function mode</description>
+                  <value>0x2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ANALOG</name>
+                  <description>Analog mode (reset value for most ports)</description>
+                  <value>0x3</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -13165,37 +13156,37 @@ Writing 1 in each bit clears the corresponding overrun flag OFx in the DMAMUX_RG
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <fields>
-            <field>
+            <field derivedFrom="AFSEL0">
               <name>AFSEL7</name>
               <bitOffset>28</bitOffset>
               <bitWidth>4</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="AFSEL0">
               <name>AFSEL6</name>
               <bitOffset>24</bitOffset>
               <bitWidth>4</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="AFSEL0">
               <name>AFSEL5</name>
               <bitOffset>20</bitOffset>
               <bitWidth>4</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="AFSEL0">
               <name>AFSEL4</name>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="AFSEL0">
               <name>AFSEL3</name>
               <bitOffset>12</bitOffset>
               <bitWidth>4</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="AFSEL0">
               <name>AFSEL2</name>
               <bitOffset>8</bitOffset>
               <bitWidth>4</bitWidth>
             </field>
-            <field>
+            <field derivedFrom="AFSEL0">
               <name>AFSEL1</name>
               <bitOffset>4</bitOffset>
               <bitWidth>4</bitWidth>
@@ -13204,6 +13195,49 @@ Writing 1 in each bit clears the corresponding overrun flag OFx in the DMAMUX_RG
               <name>AFSEL0</name>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
+              <description>Selection of the specific alternate function (AF) if this pin is set to alternate function mode.</description>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>AF0</name>
+                  <description>Alternate function 0</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>AF1</name>
+                  <description>Alternate function 1</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>AF2</name>
+                  <description>Alternate function 2</description>
+                  <value>0x2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>AF3</name>
+                  <description>Alternate function 3</description>
+                  <value>0x3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>AF4</name>
+                  <description>Alternate function 4</description>
+                  <value>0x4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>AF5</name>
+                  <description>Alternate function 5</description>
+                  <value>0x5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>AF6</name>
+                  <description>Alternate function 6</description>
+                  <value>0x6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>AF7</name>
+                  <description>Alternate function 7</description>
+                  <value>0x7</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -13584,18 +13618,83 @@ This filter can only be programmed when the I2C is disabled (PE = 0).</descripti
             <access>read-write</access>
             <enumeratedValues>
               <enumeratedValue>
-                <name>B_0x0</name>
+                <name>DISABLED</name>
                 <description>Digital filter disabled </description>
                 <value>0x0</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x1</name>
-                <description>Digital filter enabled and filtering capability up to 1 tI2CCLK</description>
+                <name>UP_TO_1_CLOCK</name>
+                <description>digital filter enabled and filtering capability up to 1 tI2CCLK</description>
                 <value>0x1</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0xF</name>
-                <description>digital filter enabled and filtering capability up to15 tI2CCLK</description>
+                <name>UP_TO_2_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 2 tI2CCLK</description>
+                <value>0x2</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_3_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 3 tI2CCLK</description>
+                <value>0x3</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_4_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 4 tI2CCLK</description>
+                <value>0x4</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_5_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 5 tI2CCLK</description>
+                <value>0x5</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_6_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 6 tI2CCLK</description>
+                <value>0x6</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_7_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 7 tI2CCLK</description>
+                <value>0x7</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_8_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 8 tI2CCLK</description>
+                <value>0x8</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_9_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 9 tI2CCLK</description>
+                <value>0x9</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_10_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 10 tI2CCLK</description>
+                <value>0xA</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_11_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 11 tI2CCLK</description>
+                <value>0xB</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_12_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 12 tI2CCLK</description>
+                <value>0xC</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_13_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 13 tI2CCLK</description>
+                <value>0xD</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_14_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 14 tI2CCLK</description>
+                <value>0xE</value>
+              </enumeratedValue>
+              <enumeratedValue>
+                <name>UP_TO_15_CLOCKS</name>
+                <description>digital filter enabled and filtering capability up to 15 tI2CCLK</description>
                 <value>0xF</value>
               </enumeratedValue>
             </enumeratedValues>
@@ -13852,12 +13951,12 @@ Note: Changing this bit when the START bit is set is not allowed.</description>
             <access>read-write</access>
             <enumeratedValues>
               <enumeratedValue>
-                <name>B_0x0</name>
+                <name>WRITE</name>
                 <description>Master requests a write transfer.</description>
                 <value>0x0</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x1</name>
+                <name>READ</name>
                 <description>Master requests a read transfer.</description>
                 <value>0x1</value>
               </enumeratedValue>
@@ -13872,12 +13971,12 @@ Note: Changing this bit when the START bit is set is not allowed.</description>
             <access>read-write</access>
             <enumeratedValues>
               <enumeratedValue>
-                <name>B_0x0</name>
+                <name>ADDR_7_BITS</name>
                 <description>The master operates in 7-bit addressing mode,</description>
                 <value>0x0</value>
               </enumeratedValue>
               <enumeratedValue>
-                <name>B_0x1</name>
+                <name>ADDR_10_BITS</name>
                 <description>The master operates in 10-bit addressing mode</description>
                 <value>0x1</value>
               </enumeratedValue>

@@ -17,6 +17,8 @@ on bootup
 
 ## I/O expander (MCP23008) pins
 
+The EPROM is assumed to be a model similar to the ST M27C800 or M27C322.
+
 | I2C address (binary) | GPIO pin | DIP pin | EPROM pin |
 | ---:| -:| --:| ---- |
 | 000 | 0 |  8 | A2   |

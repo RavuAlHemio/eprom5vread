@@ -1,3 +1,6 @@
+//! Functions for UART (universal asynchronous receiver-transmitter) communication on the STM32G0B0.
+
+
 use stm32g0b0::Peripherals;
 
 

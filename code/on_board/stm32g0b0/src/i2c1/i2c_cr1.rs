@@ -435,11 +435,37 @@ pub type DNF_R = crate::FieldReader<DNF_A>;
 #[repr(u8)]
 pub enum DNF_A {
     #[doc = "0: Digital filter disabled"]
-    B_0X0 = 0,
-    #[doc = "1: Digital filter enabled and filtering capability up to 1 tI2CCLK"]
-    B_0X1 = 1,
-    #[doc = "15: digital filter enabled and filtering capability up to15 tI2CCLK"]
-    B_0X_F = 15,
+    DISABLED = 0,
+    #[doc = "1: digital filter enabled and filtering capability up to 1 tI2CCLK"]
+    UP_TO_1_CLOCK = 1,
+    #[doc = "2: digital filter enabled and filtering capability up to 2 tI2CCLK"]
+    UP_TO_2_CLOCKS = 2,
+    #[doc = "3: digital filter enabled and filtering capability up to 3 tI2CCLK"]
+    UP_TO_3_CLOCKS = 3,
+    #[doc = "4: digital filter enabled and filtering capability up to 4 tI2CCLK"]
+    UP_TO_4_CLOCKS = 4,
+    #[doc = "5: digital filter enabled and filtering capability up to 5 tI2CCLK"]
+    UP_TO_5_CLOCKS = 5,
+    #[doc = "6: digital filter enabled and filtering capability up to 6 tI2CCLK"]
+    UP_TO_6_CLOCKS = 6,
+    #[doc = "7: digital filter enabled and filtering capability up to 7 tI2CCLK"]
+    UP_TO_7_CLOCKS = 7,
+    #[doc = "8: digital filter enabled and filtering capability up to 8 tI2CCLK"]
+    UP_TO_8_CLOCKS = 8,
+    #[doc = "9: digital filter enabled and filtering capability up to 9 tI2CCLK"]
+    UP_TO_9_CLOCKS = 9,
+    #[doc = "10: digital filter enabled and filtering capability up to 10 tI2CCLK"]
+    UP_TO_10_CLOCKS = 10,
+    #[doc = "11: digital filter enabled and filtering capability up to 11 tI2CCLK"]
+    UP_TO_11_CLOCKS = 11,
+    #[doc = "12: digital filter enabled and filtering capability up to 12 tI2CCLK"]
+    UP_TO_12_CLOCKS = 12,
+    #[doc = "13: digital filter enabled and filtering capability up to 13 tI2CCLK"]
+    UP_TO_13_CLOCKS = 13,
+    #[doc = "14: digital filter enabled and filtering capability up to 14 tI2CCLK"]
+    UP_TO_14_CLOCKS = 14,
+    #[doc = "15: digital filter enabled and filtering capability up to 15 tI2CCLK"]
+    UP_TO_15_CLOCKS = 15,
 }
 impl From<DNF_A> for u8 {
     #[inline(always)]
@@ -453,33 +479,111 @@ impl crate::FieldSpec for DNF_A {
 impl DNF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<DNF_A> {
+    pub const fn variant(&self) -> DNF_A {
         match self.bits {
-            0 => Some(DNF_A::B_0X0),
-            1 => Some(DNF_A::B_0X1),
-            15 => Some(DNF_A::B_0X_F),
-            _ => None,
+            0 => DNF_A::DISABLED,
+            1 => DNF_A::UP_TO_1_CLOCK,
+            2 => DNF_A::UP_TO_2_CLOCKS,
+            3 => DNF_A::UP_TO_3_CLOCKS,
+            4 => DNF_A::UP_TO_4_CLOCKS,
+            5 => DNF_A::UP_TO_5_CLOCKS,
+            6 => DNF_A::UP_TO_6_CLOCKS,
+            7 => DNF_A::UP_TO_7_CLOCKS,
+            8 => DNF_A::UP_TO_8_CLOCKS,
+            9 => DNF_A::UP_TO_9_CLOCKS,
+            10 => DNF_A::UP_TO_10_CLOCKS,
+            11 => DNF_A::UP_TO_11_CLOCKS,
+            12 => DNF_A::UP_TO_12_CLOCKS,
+            13 => DNF_A::UP_TO_13_CLOCKS,
+            14 => DNF_A::UP_TO_14_CLOCKS,
+            15 => DNF_A::UP_TO_15_CLOCKS,
+            _ => unreachable!(),
         }
     }
     #[doc = "Digital filter disabled"]
     #[inline(always)]
-    pub fn is_b_0x0(&self) -> bool {
-        *self == DNF_A::B_0X0
+    pub fn is_disabled(&self) -> bool {
+        *self == DNF_A::DISABLED
     }
-    #[doc = "Digital filter enabled and filtering capability up to 1 tI2CCLK"]
+    #[doc = "digital filter enabled and filtering capability up to 1 tI2CCLK"]
     #[inline(always)]
-    pub fn is_b_0x1(&self) -> bool {
-        *self == DNF_A::B_0X1
+    pub fn is_up_to_1_clock(&self) -> bool {
+        *self == DNF_A::UP_TO_1_CLOCK
     }
-    #[doc = "digital filter enabled and filtering capability up to15 tI2CCLK"]
+    #[doc = "digital filter enabled and filtering capability up to 2 tI2CCLK"]
     #[inline(always)]
-    pub fn is_b_0x_f(&self) -> bool {
-        *self == DNF_A::B_0X_F
+    pub fn is_up_to_2_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_2_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 3 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_3_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_3_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 4 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_4_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_4_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 5 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_5_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_5_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 6 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_6_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_6_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 7 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_7_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_7_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 8 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_8_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_8_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 9 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_9_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_9_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 10 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_10_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_10_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 11 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_11_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_11_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 12 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_12_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_12_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 13 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_13_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_13_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 14 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_14_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_14_CLOCKS
+    }
+    #[doc = "digital filter enabled and filtering capability up to 15 tI2CCLK"]
+    #[inline(always)]
+    pub fn is_up_to_15_clocks(&self) -> bool {
+        *self == DNF_A::UP_TO_15_CLOCKS
     }
 }
 #[doc = "Field `DNF` writer - Digital noise filter These bits are used to configure the digital noise filter on SDA and SCL input. The digital filter, filters spikes with a length of up to DNF\\[3:0\\]
 * tI2CCLK ... Note: If the analog filter is also enabled, the digital filter is added to the analog filter. This filter can only be programmed when the I2C is disabled (PE = 0)."]
-pub type DNF_W<'a, REG> = crate::FieldWriter<'a, REG, 4, DNF_A>;
+pub type DNF_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4, DNF_A>;
 impl<'a, REG> DNF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -487,18 +591,83 @@ where
 {
     #[doc = "Digital filter disabled"]
     #[inline(always)]
-    pub fn b_0x0(self) -> &'a mut crate::W<REG> {
-        self.variant(DNF_A::B_0X0)
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::DISABLED)
     }
-    #[doc = "Digital filter enabled and filtering capability up to 1 tI2CCLK"]
+    #[doc = "digital filter enabled and filtering capability up to 1 tI2CCLK"]
     #[inline(always)]
-    pub fn b_0x1(self) -> &'a mut crate::W<REG> {
-        self.variant(DNF_A::B_0X1)
+    pub fn up_to_1_clock(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_1_CLOCK)
     }
-    #[doc = "digital filter enabled and filtering capability up to15 tI2CCLK"]
+    #[doc = "digital filter enabled and filtering capability up to 2 tI2CCLK"]
     #[inline(always)]
-    pub fn b_0x_f(self) -> &'a mut crate::W<REG> {
-        self.variant(DNF_A::B_0X_F)
+    pub fn up_to_2_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_2_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 3 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_3_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_3_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 4 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_4_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_4_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 5 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_5_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_5_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 6 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_6_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_6_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 7 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_7_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_7_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 8 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_8_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_8_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 9 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_9_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_9_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 10 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_10_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_10_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 11 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_11_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_11_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 12 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_12_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_12_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 13 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_13_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_13_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 14 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_14_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_14_CLOCKS)
+    }
+    #[doc = "digital filter enabled and filtering capability up to 15 tI2CCLK"]
+    #[inline(always)]
+    pub fn up_to_15_clocks(self) -> &'a mut crate::W<REG> {
+        self.variant(DNF_A::UP_TO_15_CLOCKS)
     }
 }
 #[doc = "Field `ANFOFF` reader - Analog noise filter OFF Note: This bit can only be programmed when the I2C is disabled (PE = 0)."]
