@@ -1944,7 +1944,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "STM32G0B0CETx"
+		(property "Value" "STM32G0B0KETx"
 			(at 139.3541 49.53 0)
 			(effects
 				(font

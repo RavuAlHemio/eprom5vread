@@ -9983,7 +9983,7 @@
 				)
 			)
 		)
-		(property "Value" "STM32G0B0CETx"
+		(property "Value" "STM32G0B0KETx"
 			(at 0 5.88 0)
 			(layer "F.Fab")
 			(hide yes)
