@@ -28,6 +28,25 @@ fn main() -> ! {
         .expect("peripherals taken?!");
 
     crate::setup::setup_clocks(&mut peripherals);
+
+    // turn on the LED
+    // enable clock for GPIOA
+    peripherals.RCC.iopenr().modify(|_, w| w
+        .gpioaen().set_bit()
+    );
+    // start out with LED off
+    peripherals.GPIOA.bsrr().write(|w| w
+        .br2().set_bit()
+    );
+    // set to output
+    peripherals.GPIOA.moder().modify(|_, w| w
+        .moder2().output()
+    );
+    // turn LED on
+    peripherals.GPIOA.bsrr().write(|w| w
+        .bs2().set_bit()
+    );
+
     crate::uart::setup(&mut peripherals);
     crate::uart::write(&mut peripherals, b"Well hello there!\r\n");
 
