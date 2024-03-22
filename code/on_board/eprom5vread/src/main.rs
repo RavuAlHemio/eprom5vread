@@ -10,6 +10,7 @@ mod uart;
 
 use core::panic::PanicInfo;
 
+use cortex_m::asm::nop;
 use cortex_m_rt::entry;
 use stm32g0b0::Peripherals;
 
@@ -51,6 +52,28 @@ fn main() -> ! {
     crate::uart::write(&mut peripherals, b"Well hello there!\r\n");
 
     crate::i2c::setup(&mut peripherals);
+
+    // reset the port expanders via PB1
+    // enable clock for GPIOB
+    peripherals.RCC.iopenr().modify(|_, w| w
+        .gpioben().set_bit()
+    );
+    // start out with reset down
+    peripherals.GPIOB.bsrr().write(|w| w
+        .br1().set_bit()
+    );
+    // set to output
+    peripherals.GPIOB.moder().modify(|_, w| w
+        .moder1().output()
+    );
+    // spin a bit
+    for _ in 0..1024 {
+        nop();
+    }
+    // pull reset back up
+    peripherals.GPIOB.bsrr().write(|w| w
+        .bs1().set_bit()
+    );
 
     // prepare the pins
     let mut ext0 = IoExtHandler::new(&mut peripherals, I2C_BASE_ADDRESS | 0b000);
