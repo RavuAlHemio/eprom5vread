@@ -1,3 +1,5 @@
 fp-*-cache
 *-backups/
 *.kicad_prl
+jlcpcb/
+*.lck
